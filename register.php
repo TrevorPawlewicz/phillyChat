@@ -1,7 +1,7 @@
 <?php
     require 'config/config.php';
-    require 'includes/form_handlers/login_handler.php';
     require 'includes/form_handlers/register_handler.php';
+    require 'includes/form_handlers/login_handler.php';
 ?>
 
 
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- show errors -->
+    <!-- _show errors_-->
     <?php
         if (isset($_POST['register_button'])) {
             echo "
@@ -30,8 +30,7 @@
             ";
         };
     ?>
-
-
+    <!-- _show errors_-->
 
 
     <div class="wrapper">
@@ -56,15 +55,19 @@
                     <input type="password" name="log_password" placeholder="Password">
                     <br>
                     <input type="submit" name="login_button" value="Login">
-
-                    <?php
-                        if (in_array("Email or Password was Incorrect! <br>", $error_array)) {
-                            echo "Email or Password was Incorrect! <br>";
-                        }
-                    ?>
                     <br>
 
                     <a href="#" id="sign-up" class="sign-up">Need an Account? Register Here.</a>
+                    <br>
+                    <p>
+
+                    </p>
+                        <?php
+                            if (in_array("Email or Password was Incorrect! <br>", $error_array)) {
+                                echo "Email or Password was Incorrect! <br>";
+                            }
+                        ?>
+                    </p>
                 </form>
             </div>
 

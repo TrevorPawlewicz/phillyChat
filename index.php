@@ -1,7 +1,8 @@
 <?php
-    include('includes/partials/header.php');
+    include('includes/header.php');
+    // session_destroy();
 ?>
 
-    <h1>Trev's PHP!</h1>
+    <h1>index.php</h1>
 </body>
 </html>
