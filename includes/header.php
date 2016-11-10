@@ -22,7 +22,7 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton|Bangers|Quicksand|Varela+Round">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/main_style.css">
 </head>
 
@@ -36,9 +36,10 @@
         <nav>
             <a href="#">
                 <?php echo $user['first_name']; ?>
+                <i class="fa fa-user-o" aria-hidden="true"></i>
             </a>
-            <a href="#">Home</a>
-            <a href="#">stuff</a>
+            <a href="#">Home <i class="fa fa-home"></i></a>
+            <a href="#">stuff<i class="fa fa-user-o" aria-hidden="true"></i></a>
             <a href="#">yep</a>
         </nav>
     </div>
