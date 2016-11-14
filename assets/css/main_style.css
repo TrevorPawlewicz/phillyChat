@@ -72,11 +72,43 @@ nav a:hover {
     border-radius: 5px;
     margin-right: 5px;
 }
-
-
-
-
-
+.main-column {
+    float: right;
+    width: 70%;
+    z-index: -1;
+    min-height: 160px;
+}
+.post-form {
+    width: 100%;
+}
+.post-form textarea {
+    width: 81%;
+    height: 60px;
+    border-radius: 3px;
+    margin-right: 5px;
+    border: 1px solid #D3D3D3;
+    font-size: 12px;
+    padding: 5px;
+}
+.post-form input[type="submit"] {
+    width: 11%;
+    height: 58px;
+    border: none;
+    border-radius: 3px;
+    background-color: #3498db;
+    color: #a3e5fb;
+    text-shadow: 1px 1px 2px black;
+    font-size: 90%;
+    position: absolute;
+    outline: 0;
+    margin: 0;
+    box-shadow: 0 4px #999;
+}
+.post-form input[type="submit"]:active {
+    color: #1468a1;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
 
 
 
