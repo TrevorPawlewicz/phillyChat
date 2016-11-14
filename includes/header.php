@@ -42,6 +42,9 @@
             <a href="#">Home <i class="fa fa-home"></i></a>
             <a href="#">stuff<i class="fa fa-user-o" aria-hidden="true"></i></a>
             <a href="#">yep</a>
+            <a href="includes/handlers/logout.php">Logout
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
         </nav>
     </div>
 
