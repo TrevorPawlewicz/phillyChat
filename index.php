@@ -4,12 +4,12 @@
 
         <div class="user-details column">
 
-            <a href="#">
+            <a href="<?php echo $userLoggedIn; ?>">
                 <img src="<?php echo $user['profile_pic']; ?>"/>
             </a>
 
             <div class="user-details-left-right">
-                <a href="#">
+                <a href="<?php echo $userLoggedIn; ?>">
                     <?php
                         echo $user['first_name'] . " " . $user['last_name'];
 
@@ -31,6 +31,6 @@
             </form>
         </div>
 
-    </div> <!-- wrapper -->
+    </div> <!-- wrapper from header.php -->
 </body>
 </html>

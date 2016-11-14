@@ -35,7 +35,7 @@
         </div>
 
         <nav>
-            <a href="#">
+            <a href="<?php echo $userLoggedIn; ?>">
                 <?php echo $user['first_name']; ?>
                 <i class="fa fa-user-o" aria-hidden="true"></i>
             </a>
