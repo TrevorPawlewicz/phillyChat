@@ -3,10 +3,14 @@
     // session_destroy();
 ?>
 
-    <div class="user-details column">
-        <a href="#">
-            <img src="<?php echo $user['profile_pic']; ?>"/>
-        </a>
+        <div class="user-details column">
+            <a href="#">
+                <img src="<?php echo $user['profile_pic']; ?>"/>
+            </a>
+        </div>
+
+
+
     </div>
 </body>
 </html>
