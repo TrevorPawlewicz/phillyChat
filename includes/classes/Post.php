@@ -56,9 +56,71 @@
                     $user_to = "";
                 } else {
                     $user_to_object = new User($connect, $row['user_to']);
-                    $user_to_name = $user_to_object -> getFirstAndLastName();
+                    $user_to_name = $user_to_object -> getFirstAndLastName(); // func in User.php
                     $user_to = "<a href='" . $row['user_to'] ."'>" . $user_to_name . "</a>";
                 }
+
+                // check if user who posted has their account closed:
+                $added_by_object = new User($connect, $added_by);
+                 //                   func in User.php
+                if ($added_by_object -> isClosed()) {
+                    continue; // back to top of while loop
+                }
+
+                $user_details_query = mysqli_query($this -> $connect, "SELECT first_name, last_name, profile_pic FROM users WHERE username='added_by'");
+                $user_row = mysqli_fetch_array($user_details_query);
+
+                // Timeframe: -------------------------------------------------
+                $date_time_now = date("Y-m-d H:i:s");
+                $start_date = new DateTime($date_time);
+                $end_date = new DateTime($date_time_now);
+                $interval = $start_date -> diff($end_date);
+                //
+                if ($interval -> y >= 1) {
+                    if ($interval == 1) {
+                        $time_message = $interval -> y . " year ago";
+                    } else {
+                        $time_message = $interval -> y . " years ago";
+                    }
+                } else if ($interval -> m >= 1) {
+                    if ($interval -> d == 0) {
+                        $days = " ago";
+                    } else if ($interval -> d == 1) {
+                        $days = $interval -> d . " day ago";
+                    } else {
+                        $days = $interval -> d . " days ago";
+                    }
+
+                    if ($interval -> m == 1) {
+                        $time_message = $interval -> m . " month" . $days;
+                    } else {
+                        $time_message = $interval -> m . " months" . $days;
+                    }
+                } else if ($interval -> d >= 1) {
+                    if ($interval -> d == 1) {
+                        $time_message = "Yesterday";
+                    } else {
+                        $time_message = $interval -> d . " days ago";
+                    }
+                } else if ($interval -> h >= 1) {
+                    if ($interval -> h == 1) {
+                        $time_message = $interval -> h . " hour ago";
+                    } else {
+                        $time_message = $interval -> h . " hours ago";
+                    }
+                } else if ($interval -> i >= 1) {
+                    if ($interval -> i == 1) {
+                        $time_message = $interval -> i . " minute ago";
+                    } else {
+                        $time_message = $interval -> i . " minutes ago";
+                    }
+                } else {
+                    if ($interval -> s < 30) {
+                        $time_message = "Just Now";
+                    } else {
+                        $time_message = $interval -> s . " seconds ago";
+                    }
+                } // Timeframe: -----------------------------------------------
             }
         }
     }
