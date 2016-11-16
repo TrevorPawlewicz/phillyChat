@@ -36,6 +36,11 @@
                 <input type="submit" name="post" id="post-text" value="Post">
                 <hr>
             </form>
+
+            <?php
+                $post = new  Post($connect, $userLoggedIn);
+                $post -> loadPostsFriends();
+            ?>
         </div>
 
     </div> <!-- wrapper from header.php -->
