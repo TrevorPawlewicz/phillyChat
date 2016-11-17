@@ -66,10 +66,9 @@
                     var page = $('.posts-area').find('.nextPage').val();
                     var noMorePosts = $('.posts-area').find('.noMorePosts').val();
 
-
-                    console.log("scrollHeight = " + document.body.scrollHeight); // 1343
-                    console.log("scrollTop = " + document.documentElement.scrollTop); // 0
-                    console.log("innerHeight = " + window.innerHeight); // 746
+                    // console.log("scrollHeight = " + document.body.scrollHeight); // 1343
+                    // console.log("scrollTop = " + document.documentElement.scrollTop); // 0
+                    // console.log("innerHeight = " + window.innerHeight); // 746
 
                     if ((document.body.scrollHeight == document.documentElement.scrollTop + window.innerHeight) && noMorePosts == 'false') {
                         $('#loading').show();
