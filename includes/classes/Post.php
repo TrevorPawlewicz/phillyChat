@@ -82,7 +82,7 @@
                         continue; // back to top of while loop
                     }
 
-                    $user_logged_obj = new User($this->con, $userLoggedIn);
+                    $user_logged_obj = new User($this -> connect, $userLoggedIn);
 
     				if($user_logged_obj->isFriend($added_by)){
 
